@@ -1,0 +1,255 @@
+*{
+    font-weight: 400;
+    font-style: normal;
+    font-family:Berkshire Swash,serif;
+    font-style: normal;
+}
+
+html {
+      scroll-behavior: smooth;
+    }
+
+/* html, body {
+      background: linear-gradient(to bottom right, #1a0061, #ff5e8e) !important;
+      color: white;
+      padding: 20px;
+      min-height: 100vh;
+    } */
+/* Star Background Container */
+    .background-stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+      /* background: linear-gradient(to bottom right, #1a0061, #ff5e8e) !important; */
+                  /* background: linear-gradient(135deg, #0002A1,#059212); */
+  /* background: linear-gradient(to bottom right, #D10363,#FDA403,#A0153E);  */
+background: linear-gradient(to bottom right, #1a0061, #3a0ca3, #7209b7, #f72585);
+
+      color: white;
+      padding: 20px;
+    
+    }
+
+    /* Individual Star Layers */
+    .background-stars .star {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      animation: animate 8.5s ease-in-out infinite,
+                 backgroundmove 16s linear infinite;
+    }
+
+    .background-stars .star.star1 { animation-delay: 0s;  background: url('star1.png'); }
+    .background-stars .star.star2 { animation-delay: -1s; background: url('star2.png'); }
+    .background-stars .star.star3 { animation-delay: -2s; background: url('star3.png'); }
+    .background-stars .star.star4 { animation-delay: -3s; background: url('star4.png'); }
+    .background-stars .star.star5 { animation-delay: -4s; background: url('star5.png'); }
+    .background-stars .star.star6 { animation-delay: -5s; background: url('star6.png'); }
+    .background-stars .star.star7 { animation-delay: -6s; background: url('star7.png'); }
+    .background-stars .star.star8 { animation-delay: -7s; background: url('star8.png'); }
+
+    /* Star Flicker Animation */
+    @keyframes animate {
+      0%, 20%, 40%, 60%, 80%, 100% { opacity: 0; }
+      10%, 30%, 50%, 70%, 90% { opacity: 1; }
+    }
+
+    /* Background Zoom */
+    @keyframes backgroundmove {
+      0% { transform: scale(1); }
+      100% { transform: scale(2); }
+    }
+
+    /* Page content styling */
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 50px;
+      color: white;
+      font-size: 20px;
+    }
+nav a {
+      font-weight: 600;
+      font-family: "Aclonica", sans-serif;
+}
+
+.hero h1 {
+      font-size: 80px;
+      margin-bottom: 20px;
+     /* color:#FF204E; */
+     color:#FF1E1E;
+      font-family: "Rubik Dirt", system-ui;
+     font-weight: 400;
+     font-style: normal;
+
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      background: linear-gradient(to right, #ff9472, #f2709c);
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .hero button:hover {
+      box-shadow: 0 0 15px #f2709c;
+      transform: scale(1.05);
+    }
+
+    #about{
+      text-align: center;
+      margin: 0 20%;
+      padding: 5% 0;
+      color: white;
+    }
+
+
+    .con{
+     background: linear-gradient(135deg, #ff9966, #ffef5e);
+      margin: 2% 5%;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+}
+.con:hover {
+      box-shadow: 0 0 15px #f2709c;
+      transform: scale(1.05);
+}
+#id{
+  margin:10% 5% ;
+}
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #ffae00;
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #ffae00, 0 0 30px #ffef5e;
+    filter: brightness(1.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #ffae00;
+    filter: brightness(1);
+  }
+}
+
+.tamil {
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  background: linear-gradient(135deg, #ff9966, #ffef5e);
+  margin: 2% 5%;
+  padding: 15px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  animation: pulseGlow 1.8s infinite ease-in-out;
+  transition: all 0.3s ease;
+}
+
+#service{
+      text-align: center;
+      margin: 0 20%;
+      padding-top: 2%;
+      padding-bottom: 5%;
+      color: white;
+    }
+    .book-now-button {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 0 10px rgba(255, 65, 108, 0.6);
+  transition: all 0.3s ease;
+}
+
+.book-now-button:hover {
+  background: linear-gradient(135deg, #00c9ff, #92fe9d);
+  color: black;
+  box-shadow: 0 0 15px #00c9ff;
+}
+
+ .contact-links a:hover i {
+    transform: scale(1.3);
+  }
+ #contact {
+ background: rgba(255, 255, 255, 0.1); /* translucent pink */
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px); /* for Safari support */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+}
+.lang {
+  text-align: center;
+  background-color: #ffffffcc;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto; /* Center horizontally */
+  max-width: 90%; /* Limit width on small screens */
+  width: 400px; /* Default width */
+}
+
+/* Tablet (portrait & landscape) */
+@media (min-width: 768px) {
+  .lang {
+    width: 500px;
+  }
+}
+
+/* Laptop and Desktop */
+@media (min-width: 1024px) {
+  .lang {
+    width: 600px;
+  }
+}
+
+/* TV or large screens */
+@media (min-width: 1920px) {
+  .lang {
+    width: 800px;
+  }
+}
+
+  
+
